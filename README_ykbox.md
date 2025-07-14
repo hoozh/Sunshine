@@ -62,8 +62,12 @@ mkdir build
 
 6. 编译
 
+不知道为什么 -DSUNSHINE_TRAY=OFF 无效，这里手动修改
+
+修改 cmake\prep\constants.cmake, set(SUNSHINE_TRAY 1) 改为 set(SUNSHINE_TRAY 0)
+
 ```bash
-cmake -B build -G Ninja -S . -DSUNSHINE_ENABLE_TRAY=OFF
+cmake -B build -G Ninja -S .
 ninja -C build
 ```
 
